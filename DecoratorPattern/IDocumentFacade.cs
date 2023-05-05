@@ -9,12 +9,9 @@ namespace DecoratorPattern
 {
     internal interface IDocumentFacade
     {
-        Document Convert(Document document, SaveFormat saveFormat);
         Document Convert(string path, SaveFormat saveFormat);
 
-
-        Document ChangeStyleToOfficial(Document document);
-        Document ChangeStyleToOfficial();
+        Document ChangeStyleToOfficial(string path, SaveFormat saveFormat);
 
     }
 }

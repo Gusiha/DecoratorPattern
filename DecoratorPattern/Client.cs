@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Aspose.Words;
 
 namespace DecoratorPattern
 {
     internal class Client
     {
-
-        public static void Execute(DocumentFacade documentFacade, string path)
+        public static Document Convert(DocumentFacade documentFacade, string filePath, SaveFormat saveFormat)
         {
-            documentFacade.ChangeStyleToOfficial();
+            return documentFacade.Convert(filePath, saveFormat);
         }
 
+        public static Document ChangeStyleToOfficial(DocumentFacade facade, string filePath, SaveFormat saveFormat)
+        {
+            return facade.ChangeStyleToOfficial(filePath, saveFormat);
+        }
     }
 }
